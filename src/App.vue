@@ -5,15 +5,14 @@
       <div class="container">
         <!-- Brand Name -->
         <span class="navbar-brand fw-bold">👥 Employee Management</span>
-        
-        <!-- Navbar Toggler for mobile view -->
-        <button 
-          class="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
-          data-bs-target="#navbarNav" 
-          aria-controls="navbarNav" 
-          aria-expanded="false" 
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -23,22 +22,34 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto gap-2 mt-2 mt-lg-0">
             <li class="nav-item">
-              <button class="btn btn-light btn-sm w-100" @click="setView('add')">
+              <button
+                class="btn btn-light btn-sm w-100"
+                @click="setView('add')"
+              >
                 ➕ Add Employee
               </button>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light btn-sm w-100" @click="setView('view')">
+              <button
+                class="btn btn-light btn-sm w-100"
+                @click="setView('view')"
+              >
                 📋 View List
               </button>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light btn-sm w-100" @click="setView('update')">
+              <button
+                class="btn btn-light btn-sm w-100"
+                @click="setView('update')"
+              >
                 ✏️ Update Details
               </button>
             </li>
             <li class="nav-item">
-              <button class="btn btn-light btn-sm w-100" @click="setView('delete')">
+              <button
+                class="btn btn-light btn-sm w-100"
+                @click="setView('delete')"
+              >
                 🗑️ Delete Records
               </button>
             </li>
@@ -86,12 +97,12 @@ export default {
     setView(view) {
       this.currentView = view;
       // Close mobile menu after selection (optional improvement)
-      const navbarCollapse = document.getElementById('navbarNav');
-      if (navbarCollapse.classList.contains('show')) {
-        navbarCollapse.classList.remove('show');
+      const navbarCollapse = document.getElementById("navbarNav");
+      if (navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
